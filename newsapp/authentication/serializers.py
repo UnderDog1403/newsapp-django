@@ -1,5 +1,8 @@
 from rest_framework import serializers
 
+
+
+
 class LoginSerializer(serializers.Serializer):
     username = serializers.CharField(required=True)
     password = serializers.CharField(required=True, write_only=True)
@@ -21,6 +24,3 @@ class RegisterSerializer(serializers.Serializer):
         if data['password'] != data['confirm_password']:
             raise serializers.ValidationError("Mật khẩu không khớp.")
         return data
-
-
-
