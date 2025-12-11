@@ -16,19 +16,20 @@ class CommentService:
         if comments is None:
             raise ValueError("khong co article")
         return comments
-    def create_comment(self, comment, user, article):
-        check_user = User.objects.filter(id=user).first()
-        check_article = Article.objects.filter(id=article).first()
+    def create_comment(self, comment, user_id, article_id):
+        check_user = User.objects.filter(id=user_id).first()
+        check_article = Article.objects.filter(id=article_id).first()
         if not check_user:
             raise ValueError("khong tim thay user")
         if not check_article:
             raise ValueError("khong tim thay article")
-        return self.commentrepository.create_comment(comment,user,article)
-    def change_comment(self,comment,id):
-        newcomment= self.commentrepository.find_by_id(id)
+        return self.commentrepository.create_comment(comment, user_id, article_id)
+
+    def change_comment(self,comment,user_id):
+        newcomment= self.commentrepository.find_by_id(user_id)
         if not newcomment:
             raise ValueError("khong co comment")
-        return self.commentrepository.change_comment(comment,id)
+        return self.commentrepository.change_comment(comment,user_id)
     def delete_comment(self,id):
         delete_comment =self.commentrepository.find_by_id(id)
         if not delete_comment:

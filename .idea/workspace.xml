@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a3692960-d6a1-4d68-8b96-47889d6bbf9b" name="Changes" comment="feat comment module">
+    <list default="true" id="a3692960-d6a1-4d68-8b96-47889d6bbf9b" name="Changes" comment="feat commentservice">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/newsapp/comment/repositories/commentrepository.py" beforeDir="false" afterPath="$PROJECT_DIR$/newsapp/comment/repositories/commentrepository.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/newsapp/comment/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/newsapp/comment/serializers.py" afterDir="false" />
@@ -106,14 +106,23 @@
       <option name="project" value="LOCAL" />
       <updated>1764927701666</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="feat commentservice">
+      <option name="closed" value="true" />
+      <created>1765358650772</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1765358650772</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="fix admin site" />
     <MESSAGE value="fix article controller" />
     <MESSAGE value="feat comment module" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat comment module" />
+    <MESSAGE value="feat commentservice" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat commentservice" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
