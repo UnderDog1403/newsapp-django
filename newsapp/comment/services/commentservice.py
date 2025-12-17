@@ -25,11 +25,11 @@ class CommentService:
             raise ValueError("khong tim thay article")
         return self.commentrepository.create_comment(comment, user_id, article_id)
 
-    def change_comment(self,comment,user_id):
-        newcomment= self.commentrepository.find_by_id(user_id)
+    def change_comment(self,comment,id):
+        newcomment= self.commentrepository.find_by_id(id)
         if not newcomment:
             raise ValueError("khong co comment")
-        return self.commentrepository.change_comment(comment,user_id)
+        return self.commentrepository.change_comment(comment,id)
     def delete_comment(self,id):
         delete_comment =self.commentrepository.find_by_id(id)
         if not delete_comment:

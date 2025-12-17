@@ -11,8 +11,8 @@ class CommentRepository:
         comment = Comment(comment=comment, user_id=user_id, article_id=article_id)
         comment.save()
         return comment
-    def change_comment(self,comment, user_id):
-        newcomment = Comment.objects.get(id=user_id)
+    def change_comment(self,comment, id):
+        newcomment = Comment.objects.get(id=id)
         newcomment.comment =comment
         newcomment.save()
         return newcomment
