@@ -47,6 +47,7 @@ INSTALLED_APPS = [
     'article',
     'corsheaders',
     'comment',
+    'savearticle'
 ]
 
 MIDDLEWARE = [
