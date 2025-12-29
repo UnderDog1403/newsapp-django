@@ -10,6 +10,10 @@ class SavearticleRepository:
          articles= SaveArticle.objects.filter(user__id=user_id).all().order_by('create_at')
          paginator = Paginator(articles,per_page)
          return paginator.get_page(page)
+    def post_savearticle(self,user_id, article_id):
+        savearticle = SaveArticle(user=user_id,article=article_id)
+        savearticle.save()
+        return savearticle
     def delete_savearticle(self,id):
         article = self.get_by_id(id)
         article.delete()

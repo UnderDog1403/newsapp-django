@@ -27,3 +27,20 @@ class SaveArticleView(APIView):
             })
         except ValueError as e:
             return Response({"error": str(e)}, status=status.HTTP_404_NOT_FOUND)
+    def post(self,request):
+        serialized = SavearticleSerializer(data=request.data)
+        if serialized.is_valid():
+            try:
+                user_id=serialized.validated_data.get("user")
+                article_id=serialized.validated_data.get("article")
+                result =self.service.post_savearticle(user_id,article_id)
+                return Response(
+                    {"message": "Thêm thành công", "savearticle_id": result.id},
+                    status=status.HTTP_201_CREATED
+                )
+            except ValueError as e:
+                return Response({"error": str(e)}, status=status.HTTP_404_NOT_FOUND)
+        return Response(serialized.errors, status=status.HTTP_400_BAD_REQUEST)
+
+
+

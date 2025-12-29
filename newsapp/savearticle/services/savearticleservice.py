@@ -27,4 +27,10 @@ class SavearticleService:
             raise ValueError("khong ton tai bai viet nay")
         self.reponsitory.delete_savearticle(id)
         return True
+    def post_savearticle(self,user_id,article_id):
+        user=self.userrepon.get_by_id(user_id)
+        if user is None:
+            raise ValueError("khong ton tai user")
+        result=self.reponsitory.post_savearticle(user_id,article_id)
+        return result
 
